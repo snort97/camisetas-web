@@ -14,6 +14,38 @@
       padding: 15px 30px;
     }
 
+    .has-submenu {
+      position: relative;
+    }
+
+    .has-submenu > a::after {
+      content: " ▼";
+      font-size: 0.8em;
+    }
+
+    .has-submenu ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #ffffff;
+      min-width: 180px;
+      z-index: 1000;
+    }
+
+    .has-submenu:hover ul {
+      display: block;
+    }
+
+    .has-submenu ul li {
+      width: 100%;
+      gap: 10px;
+    }
+
+    .has-submenu ul li {
+    margin-bottom: 4px; 
+}
+
     header h1 {
       margin: 0;
       font-size: 24px;
@@ -42,6 +74,12 @@
 
     nav a:hover {
       color: #ffce00;
+    }
+
+    nav ul, nav li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
 
     .cart-icon {
@@ -171,17 +209,27 @@
 </head>
 <body>
 
-    <header>
-        <h1>Camisetas ML</h1>
-        <nav>
-          <a href="#catalogo">Camisetas</a>
-            <!--🛒<span id="cart-count" class="cart-count">0</span>-->
-          </div>
+  <header>
+    <h1>Camisetas ML</h1>
+    <nav>
+      <ul style="display: flex; align-items: center; gap: 20px;">
+        <li class="has-submenu">
+          <a href="#">Equipos FPC</a>
+          <ul>
+            <li><a href="america.html">America de Cali</a></li>
+            <li><a href="nacional.html">Atlético Nacional</a></li>
+            <li><a href="Millonarios.html">Millonarios</a></li>
+          </ul>
+        </li>
+        <li><a href="#catalogo">Camisetas</a></li>
+        <li>
           <a href="https://instagram.com/tu_usuario" target="_blank" class="instagram-logo" title="Síguenos en Instagram">
             <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
           </a>
-        </nav>
-      </header>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
   <section class="hero">
     <h2>Camisetas ML ¡Viste con honor!</h2>
