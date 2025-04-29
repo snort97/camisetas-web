@@ -5,7 +5,7 @@ Este proyecto fue desarrollado con HTML y el framework Tailwind CSS para el serv
 ## 🛠️ Tecnologías
 
 - HTML
-- Tailwind CSS
+- CSS
 
 ## 📌 Autor
 
